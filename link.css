@@ -1,0 +1,23 @@
+.link:hover,.link *:hover{
+	font-weight:normal;
+}
+.link{
+	cursor:pointer;
+	top:50%;
+	transform:translate(0,-50%);
+	vertical-align: top;
+	display:inline-block;
+    border:5px solid #000000;
+    box-shadow:0 0 2px 2px #000000,inset 0 0 2px 2px #000000;
+    background:#ffffff;
+    margin:10px;
+    padding:10px;
+}
+.link,.link *{
+	white-space:nowrap;
+    text-decoration:none;
+    font-weight:lighter;
+    color:#000000;
+    font-size:48px;
+    font-family:sans;
+}

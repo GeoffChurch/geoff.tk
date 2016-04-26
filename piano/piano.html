@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="piano.css">
+  </head>
+  <body>
+    <table id="topsection">
+      <tr>
+	<td id="sidebar">
+	  <table id="settingsTable" width="100%" height="100%">
+	    <tr>
+	      <td>Tone</td>
+	      <td id="toneButtons" colspan="2"></td>
+	    </tr>
+	    <tr>
+	      <td>Rhythm</td>
+	      <td id="rhythmButtons" colspan="2"></tr>
+	    <tr>
+	      <td>Impulse</td>
+	      <td id="impulseButtons" colspan="2"></td>
+	    </tr>
+	    <tr>
+	      <td>Piano Volume</td>
+	      <td><input class="range setting" type="range" id="pianoGainRange" min="0" max="10" value="5" step="0.01"></td> 
+	      <td id="pianoGainRangeO">5</td>
+	    </tr>
+	    <tr>
+	      <td>Rhythm Volume</td>
+	      <td><input class="range setting" type="range" id="rhythmGainRange" min="0" max="10" value="5" step="0.01"></td> 
+	      <td id="rhythmGainRangeO">5</td>
+	    </tr>
+	    <tr>
+	      <td>Distortion Level</td>
+	      <td><input class="range setting" type="range" id="distortionGainRange" min="0" max="1000" value="0"></td>
+	      <td id="distortionGainRangeO">0</td>
+	    </tr>
+	    <tr>
+	      <td>Echo delay (s)</td>
+	      <td><input class="range setting" type="range" id="echoDelayRange" min="0" max="2" value="0" step="0.001"></td>
+	      <td id="echoDelayRangeO">0</td>
+	    </tr>
+	    <tr>
+	      <td>Echo Feedback (%)</td>
+	      <td><input class="range setting" type="range" id="echoGainRange" min="0" max="100" value="0" step="0.01"></td>
+	      <td id="echoGainRangeO">0</td>
+	    </tr>
+	    <!--	    <tr>
+			    <td>Reverb</td>
+			    <td><input class="radio setting" id="reverbRadio0" type="radio" value="0" name="reverbType" checked="checked"><label for="reverbRadio0">None</label>
+			      <input class="radio setting" id="reverbRadio1" type="radio" value="1" name="reverbType"><label for="reverbRadio1">Studio</label>
+			      <input class="radio setting" id="reverbRadio2" type="radio" value="2" name="reverbType"><label for="reverbRadio2">Hall</label></td>
+	    </tr>-->
+	    <tr>
+	      <td>Filter Frequency</td>
+	      <td><input class="range setting" type="range" id="filterFrequency" min="0" max="11025" value="0"></td>
+	      <td id="filterFrequencyO">0</td>
+	    </tr>
+	    <tr>
+	      <td>Filter Quality</td>
+	      <td><input class="range setting" type="range" id="filterQ" min="0" max="1000" value="0"></td>
+	      <td id="filterQO">0</td>
+	    </tr>
+	    <tr>
+	      <td>Filter Type</td>
+	      <td><input class="radio setting" type="radio" id="highpassRadio" value="highpass" name="filterType" checked="checked"><label for="highpassRadio">High Pass</label></td>
+	      <td><input class="radio setting" type="radio" id="lowpassRadio" value="lowpass" name="filterType"><label for="lowpassRadio">Low Pass</label></td>
+	    </tr>
+	    <!--				<tr>
+						<td>Tremolo Level</td>
+						<td><input class="range setting" type="range" id="tremoloAmountRange" min="0" max="10" value="0" step="0.01"></td>
+						<td id="tremoloAmountRangeO">0</td>
+	    </tr>
+	    <tr>
+	      <td>Tremolo Frequency (Hz)</td>
+	      <td><input class="range setting" type="range" id="tremoloFrequencyRange" min="0" max="220" value="0"></td>
+	      <td id="tremoloFrequencyRangeO">0</td>
+	    </tr>-->
+	  </table>
+	</td>
+	<td>
+	  <canvas id="myCanvas"></canvas></td>
+      </tr>
+      <tr>
+	<td colspan="2">
+	  <div id="keyBoard" class="keyBoard"></div>
+	</td>
+      </tr>
+    </table>
+    <!--    <div id="keyBoard" class="keyBoard"></div>-->
+  </body>
+</html>

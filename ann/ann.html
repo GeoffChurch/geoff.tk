@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <script src="ann.js"></script>
+  </head>
+  <body>
+	  <div>
+	    <input min="0" id="population_control" type="number" value="193" oninput="setPopulation();updateGraph();">
+	    <label>number of neurons</label>
+	  </div>
+	  <p>resetTopology=function(neurons){</p>
+	  <textarea id="topology_control" style="margin-left: 4em;width:30%;" rows="7">
+deleteAllSynapses();
+var population=neurons.length;
+for(var i=0;i!=population;i++){
+    var src=neurons[i];
+    for(var j=0;j!=population;j++){
+        if(Math.random()&lt;0.05)
+            newSynapse(src,neurons[j]);
+    }
+}
+	  </textarea>
+	  <p>};<button onclick="setTopologyF();resetTopology();">eval</button></p>
+	  <div>
+	    <input max="1" min="-1" step="any" id="min_charge_control" type="number" value="-0.5">
+	    <label>minimal charge</label>
+	  </div>
+	  <div>
+	    <input max="1" min="-1" step="any" id="max_charge_control" type="number" value="0.5">
+	    <label>maximal charge</label>
+	  </div>
+	  <button onclick="resetCharges();">reset charges</button>
+	  <div>
+	    <input min="0" id="period_control" type="number" value="50">
+	    <label>step period</label>
+	  </div>
+	  <p>learning_rule=function(synapse){</p>
+	  <textarea id="learning_rule_control" style="margin-left: 4em;width:30%;" rows="7">
+//synapse: {weight:double,src:neuron,dst:neuron}
+//neuron: {charge:[double,double],inputs:[synapse,...],outputs:[synapse,...],f:double->double}
+//T: a boolean clock for atomic operations on neuron charges
+var weight=synapse.weight;
+var dst=synapse.dst;
+synapse.weight+=dst.f(dst.charge[T?0:1]);</textarea>
+	  <p>};<button onclick="setLearningRule();">eval</button></p>
+	  <svg id="graph" style="top:0;right:0;position:fixed;">
+	    <defs>
+	      <marker orient="auto" markerHeight="30" markerWidth="40" markerUnits="strokeWidth" refY="5" refX="0" viewBox="0 0 10 10" id="triangle">
+		<path d="M 0 0 L 10 5 L 0 10 z"></path>
+	      </marker>
+	    </defs>
+	  </svg>
+  </body>
+</html>

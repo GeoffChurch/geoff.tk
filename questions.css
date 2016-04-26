@@ -1,0 +1,40 @@
+body{
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    position:relative;
+    text-align:-moz-center;
+    pointer-events:none;
+}
+body > div{
+    margin-left:50%;
+    transform:translate(-50%,0);
+    pointer-events:all;
+    text-align:left;
+    width:50%;
+}
+
+#grid{
+    z-index:-1;
+    top:0;
+    position:fixed;
+    pointer-events:all;
+}
+.link{
+    margin-left:50%;
+    transform:translate(-50%,0);
+}
+a{
+    color:#5555aa;
+    text-decoration:none;
+    font-weight:bold;
+}
+ol{
+    font-weight:bold;
+}
+li{
+    margin-bottom:20px;
+}
+p{
+    margin:10px 20px 10px 20px;
+}

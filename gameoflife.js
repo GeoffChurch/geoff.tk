@@ -1,4 +1,4 @@
-// game of life constants
+//// game of life constants
 var TIME=true;
 var ROWS;
 var COLS;

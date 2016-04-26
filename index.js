@@ -2,11 +2,6 @@ var PROJECTS=[
     {name:'piano',href:'piano/piano.html'},
     {name:'brain',href:'ann/ann.html'},
     {name:'repos',href:'https://github.com/GeoffChurch/'},
-    //TODO delete
-    {name: 'instructions',href:'https://docs.google.com/document/d/1rMLlDLnYHNAT0UY7E8nMCPxTCJIOtoLocQFK90q1-EQ/edit?usp=sharing'},
-    {name: 'lit. review',href:'https://docs.google.com/document/d/1S6_y1tsVqWIkRvv1VdwUfcRCGvwg7tRNIBAy59waduY/edit?usp=sharing'},
-    {name: 'research prop.',href:'https://docs.google.com/document/d/11iSIXQ7MJedNxFfEh1xANH12N39f_VqHY1o6GbjBNCM/edit?usp=sharing'},
-    {name: 'news',href:'https://docs.google.com/document/d/1HGC0oP0J-AAGrx4BBc8IPYvRNU7vCX_ZSwu6wiIxVfA/edit?usp=sharing'},
 ];
 var delChildren=function(e){
     var last;

@@ -20,23 +20,21 @@
 		<a href="resume.pdf" style="font-size:28px">my resume</a>
 	    </div>
 	    <p>I'm studying computer science at Stony Brook University, and I'm interested in graph theory, computation, and artificial intelligence. If you'd like to contact me, feel free to reach out!</p>
-	    <form onsubmit="submitForm(new FormData(this));">
+	    <form id="contactForm">
 		<div>
 		    <textarea style="border:1px solid rgba(169,169,169,1);font-family:monospace;background:rgba(0,0,0,0.1);width:100%;font-size:20px;" placeholder="message" rows="3" tabindex="0" aria-label="message" name="Contact me" dir="auto" data-initial-dir="auto" data-initial-value="" oninput="this.parentNode.lastElementChild.value=this.value;"></textarea>
 		    <input type="hidden" name="entry.189164299">
 		</div>
 		<div>
-		    <input type="email" style="border:1px solid rgba(169,169,169,1);font-family:monospace;background:rgba(0,0,0,0.1);width:100%;font-size:20px;" placeholder="email" tabindex="0" aria-label="email" name="Contact me" value="" dir="auto" data-initial-dir="auto" data-initial-value="" oninput="this.parentNode.lastElementChild.value=this.value;">
+		    <input type="email" id="emailInput" style="border:1px solid rgba(169,169,169,1);font-family:monospace;background:rgba(0,0,0,0.1);width:100%;font-size:20px;" placeholder="email" tabindex="0" aria-label="email" name="Contact me" value="" dir="auto" data-initial-dir="auto" data-initial-value="" oninput="this.parentNode.lastElementChild.value=this.value;">
 		    <input type="hidden" name="entry.1187702978" jsname="L9xHkb">
 		</div>
 		<input type="hidden" name="fvv" value="1">
 		<input type="hidden" name="draftResponse" value="[,,&quot;-4643311564984312559&quot;]">
 		<input type="hidden" name="pageHistory" value="0">
 		<input type="hidden" name="fbzx" value="-4643311564984312559">
-		<input type="submit" id="submitButton" style="position:absolute;opacity:0;width:1px;height:1px;pointer-events:none;">
-		<div style="margin-top:5px;">
-		    <label for="submitButton" id="submitLabel">Submit</label>
-		</div>
+		<!-- <input type="submit" id="submitButton" style="position:absolute;opacity:0;width:1px;height:1px;pointer-events:none;"> -->
+		<button type="button" id="submitLabel" onclick="submitForm(new FormData(this.parent));">submit</button>
 	    </form>
 	    <div class="link" onclick="window.location='..';">back</div>
 	</div>

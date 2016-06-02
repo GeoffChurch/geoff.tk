@@ -20,6 +20,7 @@ body > div{
 }
 
 #submitLabel{
+    margin-top:5px;
     display:block;
     text-align:center;
     color:#aaaaaa;

@@ -11,10 +11,10 @@ function submitForm(formData){ // just ignore response
 window.onload=function(){
     initGrid(document.body);
     passAlongEvents(document.getElementById('mainDiv'));
-    document.getElementById('contactForm').onsubmit=function(e){
-	e.preventDefault();
+    /*document.getElementById('contactForm').onsubmit=function(e){
+	//e.preventDefault();
 	return false;
-    };
+    };*/
     document.getElementById('emailInput').onkeydown=function(e){
 	if(e.keyCode==13){
 	    e.preventDefault();

@@ -19,6 +19,10 @@ body > div{
     position:fixed;
 }
 
+.li-connect-widget .li-connect-mark {
+    background: none !important;
+}
+
 #submitLabel{
     margin-top:5px;
     display:block;

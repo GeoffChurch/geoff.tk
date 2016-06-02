@@ -1,8 +1,9 @@
 #grid{
+    -webkit-filter:blur(3px);
     width:100%;
     height:100%;
 }
-.live{
-    background-color:#5555ff;
-    box-shadow:inset 0 0 16px 8px #ffffff;
+.l{
+    background-color:#aaaaff;
+    /* box-shadow:inset 0 0 16px 8px #ffffff; */
 }

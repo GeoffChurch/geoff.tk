@@ -1,13 +1,11 @@
+function submitForm(formData){ // just ignore response
+    var xhr = new XMLHttpRequest();
+    //xhr.onload=function(e){console.log('ajax returned', e);};
+    xhr.open('POST', 'https://docs.google.com/forms/d/1Rg_XyGY3KDP-xVNVFEGcQVRfzuoYzNJFNeRyU35P4wU/formResponse?embedded=true', true);
+    xhr.send(formData);
+}
+
 window.onload=function(){
     initGrid(document.body);
-    var grid=document.getElementById('grid');
-    var rows=grid.children.length;
-    var cols=grid.children[0].children.length;
-    var xMult=cols/window.innerWidth;
-    var yMult=rows/window.innerHeight;
-    console.log(rows,cols);
-    document.getElementById('mainDiv').onmousemove=function(e){
-	document.getElementById('c'+Math.floor(e.clientY*yMult)+'_'+Math.floor(e.clientX*xMult)).dispatchEvent(new CustomEvent('mouseover'));
-    };   
-}
-;
+    passAlongEvents(document.getElementById('mainDiv'));
+};   

@@ -11,21 +11,20 @@
   <body>
     <div id="mainDiv">
       <h1>Q's without A's</h1>
-      <h3>Here are a few questions I've come up with, and hope to someday answer.</h3>
-      <ol>
+      <ul>
 	<li>
-	  Many of the most intelligent animals in the world have <a href="spindle.pdf">independently</a> evolved spindle neurons, which connect distant regions of the brain. Does this suggest that the coherency brought by small-world (logarithmic) topologies is ideal for intelligent networks, or merely that animals need brains which can quickly react to threat stimuli?
-	  <p><a href="neural_topology.pdf">Recent studies</a> have shown that logarithmic topologies are present in neural microstructures as well, supporting the hypothesis that speed is not the sole benefit. Applying this to ANNs, it stands to reason that fast information propagation would generally lend itself to fast training rates. This finds analogy in the acceleration of scientific progress with the advent of near-instantaneous global communication.</p>
+	  Many of the most intelligent animals in the world have <a href="spindle.pdf">independently</a> evolved spindle neurons, which connect distant regions of the brain. Does this suggest that the coherency brought by small-world topologies is ideal for intelligent networks, or merely that animals need brains which can quickly react to threat stimuli?
+	  <p><a href="neural_topology.pdf">Recent studies</a> have shown that these topologies are present in neural microstructures as well, supporting the hypothesis that speed is not the sole benefit. In terms of ANNs, it stands to reason that fast information propagation would generally lend itself to fast training rates. This finds analogy in the acceleration of scientific progress with the advent of near-instantaneous global communication.</p>
 	</li>
 	<li>
-	  Is there a pattern to the deletions made when applying <a href="le_cun.pdf">Optimal Brain Damage</a> to the neurons or synapses of a fully-trained, complete RNN?<p>Such a pattern would point to smaller, sparser topologies which closely approximate the useful characteristics of a complete graph.</p>
+	  Is there a pattern to the deletions made when applying <a href="le_cun.pdf">Optimal Brain Damage</a> to the neurons or synapses of a fully-trained, complete RNN?<p>Such a pattern could point to smaller, sparser topologies which closely approximate the ideal of a complete graph.</p>
 	</li>
 	<li>
 	  Is there a space which orders cellular automata according to how chaotically they behave?
-	  <p><a href="langton.pdf">Langton</a> devised the &lambda; parameter in an attempt to do so (simply the percentage of 1's in the rule), but his measure is only applicable to binary automata, and ignores the subtlety of state transitions; for instance, 000 &#8594; 0 should certainly be interpreted differently than 101 &#8594; 0. It is difficult to extend the &lambda; parameter to arbitrary arities; for instance, returning the average of the rule is inaccurate, because in an 8-ary CA, state 4 is no closer to 5 than it is to 0.</p>
-	  <p>The <a href="https://github.com/GeoffChurch/CellularAutomata/blob/master/automaton.py#L64">tmat</a> can be a useful tool for interpreting rules. The tmat of a rule is the matrix M where M[i][j] is the number of scenarios in which a cell in state i results in a cell becoming or remaining in state j. Given a prior PDF over cell states, multiplying by the tmat yields an approximation of the posterior (how closely?). In a binary automaton, the sum of the top row divided by the rule length equals the &lambda; parameter, so perhaps the standard deviation of sums over the length of the rule would be a viable extension of the &lambda; parameter to higher dimensions. However, the minor diagonal records how many ways a cell state can remain the same, which more accurately captures what we think of as order and, inversely, chaos. Ordering automata by the determinants of their tmats also works well, largely because rules with similar behaviors tend to have similar tmats, and the determinant in this context is essentially a locality-sensitive hash function.</p>
+	  <p><a href="langton.pdf">Langton</a> devised the &lambda; parameter in an attempt to do so, but his measure ignores the subtlety of state transitions; for instance, 000 &#8594; 0 should certainly be interpreted differently than 101 &#8594; 0.</p>
+	  <p>The <a href="https://github.com/GeoffChurch/CellularAutomata/blob/master/automaton.py#L64">tmat</a> can be a useful tool for interpreting rules. The tmat of a rule is the matrix M where M[i][j] is the number of input scenarios in which a cell in state i results in a cell becoming or remaining in state j. Given a prior PDF over cell states, multiplying by the tmat yields an approximation of the posterior. In a binary automaton, the sum of the top row divided by the rule length equals the &lambda; parameter, so perhaps the standard deviation of sums over the length of the rule would be a viable extension of the &lambda; parameter to higher dimensions. However, the minor diagonal records how many ways a cell state can remain the same, which more accurately captures what we think of as order and, inversely, chaos. Ordering automata by the determinants of their tmats also works well, but this is largely because rules with similar behaviors tend to have similar tmats, and the determinant in this context is essentially a locality-sensitive hash function.</p>
 	  <p>
-	    Although the tmat is useful for basic statistical analysis, it ignores the difference between 110 &#8594; 0 and 101 &#8594; 0, which may entail very different outcomes in the next timestep. Since an a-ary CA's cell function has i inputs, not just 1, a more accurate representation would be a matrix of possible transitions over the a<sup>i</sup> different i-tuples.
+	    Although the tmat is useful for getting a vague idea of the state distribution, it ignores the difference between 110 &#8594; 0 and 101 &#8594; 0, which may entail very different outcomes in the next timestep. Since an a-ary CA's cell function has i inputs, not just 1, a more accurate representation would be a matrix of possible transitions over the a<sup>i</sup> different i-tuples.
 	  </p>
 	</li>
 	<li>
@@ -47,7 +46,7 @@
 	    and the maximum is the case where number of orbits = orbit length = &radic;(number of system states).
 	  </p>
 	</li>
-      </ol>
+      </ul>
       <div class="link" onclick="window.location='..';">back</div>
     </div>
   </body>

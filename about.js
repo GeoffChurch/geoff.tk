@@ -1,11 +1,11 @@
-function submitForm(formData){ // just ignore response
-    /*var xhr = new XMLHttpRequest();
-    xhr.onload=function(e){
+function submitForm(formEl){ // just ignore response
+    var xhr = new XMLHttpRequest();
+    /*xhr.onload=function(e){
 	console.log('ajax returned', e);
 	document.getElementById('contactForm').reset();
-    };
+    };*/
     xhr.open('POST', 'https://docs.google.com/forms/d/1Rg_XyGY3KDP-xVNVFEGcQVRfzuoYzNJFNeRyU35P4wU/formResponse?embedded=true', true);
-    xhr.send(formData);*/
+    xhr.send(new FormData(formEl));
 }
 
 window.onload=function(){

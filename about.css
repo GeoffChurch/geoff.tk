@@ -19,7 +19,7 @@ body > div{
     position:fixed;
 }
 
-.li-connect-widget .li-connect-mark {
+.li-connect-widget .li-connect-link .li-connect-mark {
     background: none !important;
 }
 
